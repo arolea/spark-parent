@@ -1,4 +1,4 @@
-package rdd.service;
+package rdd.service.person;
 
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;

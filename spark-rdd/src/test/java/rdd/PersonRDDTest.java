@@ -9,9 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import rdd.model.Person;
-import rdd.service.PersonProcessor;
-import rdd.service.PersonReader;
-import rdd.service.PersonWriter;
+import rdd.service.person.PersonProcessor;
+import rdd.service.person.PersonReader;
+import rdd.service.person.PersonWriter;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
