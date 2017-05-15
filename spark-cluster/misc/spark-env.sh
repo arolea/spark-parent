@@ -1,0 +1,6 @@
+#!/bin/bash
+
+export SPARK_WORKER_CORES=3
+export SPARK_WORKER_INSTANCES=2
+export SPARK_WORKER_MEMORY=3g
+
