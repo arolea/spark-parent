@@ -22,7 +22,7 @@ public class SparkConfig {
                 // cluster name - run locally
                 .setMaster("local")
                 // application name
-                .setAppName("My App");
+                .setAppName("IO Sample APP");
     }
 
     /**
