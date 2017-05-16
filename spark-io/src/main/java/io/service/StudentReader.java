@@ -10,14 +10,12 @@ import org.apache.spark.sql.SQLContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.io.Serializable;
-
 /**
  * Example of Spark readers.
  * Created by rolea on 5/8/17.
  */
 @Component
-public class StudentReader implements Serializable {
+public class StudentReader {
 
     @Autowired
     private JavaSparkContext javaContext;

@@ -27,12 +27,7 @@ public class StudentWriter {
      */
     public void writeStudentsToJSON(JavaRDD<Student> values) {
         values
-                .mapPartitions(students -> {
-                    List<String> text = new LinkedList<>();
-                    while (students.hasNext()) {
-                        text.add(mapper.writeValueAsString(students.next()));
-                    }
-                    return text.iterator();})
+                .map(mapper::writeValueAsString)
                 .saveAsTextFile("students.out");
     }
 
