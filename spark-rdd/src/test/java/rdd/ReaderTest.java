@@ -6,6 +6,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+import rdd.model.Product;
 import rdd.service.product.ProductReader;
 import rdd.service.product.ProductWriter;
 
@@ -60,7 +61,7 @@ public class ReaderTest {
      */
     @Test
     public void testGroupByKey(){
-        JavaPairRDD<String, Iterable<Integer>> productsByCategory = reader.groupByKeyExample(reader.getProductRdd());
+        JavaPairRDD<String, Iterable<Product>> productsByCategory = reader.groupByKeyExample(reader.getProductRdd());
         assertThat(productsByCategory).as("Products per category").isNotNull();
         writer.writePair(productsByCategory);
     }

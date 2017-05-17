@@ -23,7 +23,7 @@ public class PairRddProductProcessor {
 
     @PostConstruct
     public void init(){
-        productCountByCategory = reader.getFirstProductsReducedByCategory();
+        productCountByCategory = reader.getFirstProductsCountReducedByCategory();
     }
 
     /**

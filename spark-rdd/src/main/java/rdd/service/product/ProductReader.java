@@ -39,11 +39,11 @@ public class ProductReader {
 
     }
 
-    public JavaPairRDD<String, Integer> getFirstProductsReducedByCategory() {
+    public JavaPairRDD<String, Integer> getFirstProductsCountReducedByCategory() {
         return reduceByKeyExample(context.parallelize(FIRST_PRODUCT_LIST));
     }
 
-    public JavaPairRDD<String, Integer> getSecondProductsReducedByCategory() {
+    public JavaPairRDD<String, Integer> getSecondProductsCountReducedByCategory() {
         return reduceByKeyExample(context.parallelize(SECOND_PRODUCT_LIST));
     }
 
@@ -67,9 +67,9 @@ public class ProductReader {
     /**
      * groupByKey example - groups products in categories.
      */
-    public JavaPairRDD<String, Iterable<Integer>> groupByKeyExample(JavaRDD<Product> products) {
+    public JavaPairRDD<String, Iterable<Product>> groupByKeyExample(JavaRDD<Product> products) {
         return products
-                .mapToPair(product->new Tuple2<>(product.getCategory(),1))
+                .mapToPair(product->new Tuple2<>(product.getCategory(),product))
                 .groupByKey();
     }
 

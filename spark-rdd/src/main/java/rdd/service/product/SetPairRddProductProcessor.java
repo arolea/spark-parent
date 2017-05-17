@@ -22,8 +22,8 @@ public class SetPairRddProductProcessor {
 
     @PostConstruct
     public void init() {
-        this.firstSet = reader.getFirstProductsReducedByCategory();
-        this.secondSet = reader.getSecondProductsReducedByCategory();
+        this.firstSet = reader.getFirstProductsCountReducedByCategory();
+        this.secondSet = reader.getSecondProductsCountReducedByCategory();
     }
 
     /**
